@@ -1,12 +1,22 @@
 import React, { Component } from "react";
 import { View, Text, Image } from "react-native";
+import { Font } from "expo";
+import DotsAnimation from "../../../components/dots-animation";
 
 class InitialLoading extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { fonts: false };
   }
+  componentDidMount = async () => {
+    await Font.loadAsync({
+      "Open-Sans": require("../../../assets/fonts/Open_Sans/OpenSans-Regular.ttf"),
+      "Open-Sans-light": require("../../../assets/fonts/Open_Sans/OpenSans-Light.ttf")
+    });
+    this.setState({ fonts: true });
+  };
   render() {
+    const { fonts } = this.state;
     return (
       <View
         style={{
@@ -24,13 +34,13 @@ class InitialLoading extends Component {
         <View>
           <Text
             style={{
-              fontFamily: "Open Sans",
-              fontSize: 18,
+              fontFamily: fonts ? "Open-Sans-light" : "sans-serif-thin",
               color: "#fff",
-              textTransform: "capitalize"
+              textTransform: "capitalize",
+              marginBottom: 10
             }}
           >
-            Checking Files....
+            {fonts ? "Checking Files" : "loading Fonts"} <DotsAnimation />
           </Text>
         </View>
       </View>
