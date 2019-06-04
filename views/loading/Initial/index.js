@@ -28,7 +28,7 @@ class InitialLoading extends Component {
       >
         <View>{/* <Text>v1.0.0</Text> */}</View>
         <Image
-          source={require("../../../assets/common/logo-dark.png")}
+          source={require("../../../assets/common/logo-light.png")}
           style={{ maxWidth: 200, resizeMode: "contain", width: "100%" }}
         />
         <View>
