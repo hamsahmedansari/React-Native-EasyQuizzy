@@ -1,14 +1,27 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import InitialLoading from "./views/loading/Initial";
+import { Font } from "expo";
+import Loading from "./views/loading";
 
 export default class App extends React.Component {
+  state = {
+    fonts: false
+  };
+  componentDidMount = async () => {
+    // temporary loading
+    await Font.loadAsync({
+      "Open-Sans": require("./assets/fonts/Open_Sans/OpenSans-Regular.ttf"),
+      "Open-Sans-light": require("./assets/fonts/Open_Sans/OpenSans-Light.ttf")
+    });
+    this.setState({ fonts: true });
+  };
   render() {
+    if (!this.state.fonts) return <View />;
     return (
       // <View style={styles.container}>
       //   <Text>Open up App.js to start working on your app!</Text>
       // </View>
-      <InitialLoading />
+      <Loading />
     );
   }
 }
