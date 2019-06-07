@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Font } from "expo";
-import Auth from "./views/auth";
+import Auth from "./views/auth/signIn";
 
 export default class App extends React.Component {
   state = {

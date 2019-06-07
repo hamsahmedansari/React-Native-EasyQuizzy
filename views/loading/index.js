@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { View, Text } from "react-native";
+import { View } from "react-native";
 
 import Logo from "../../components/logo/dark";
+import Text from "../../components/text";
 
 class Loading extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class Loading extends Component {
           style={{
             textTransform: "capitalize",
             fontSize: 18,
-            fontFamily: "Open-Sans-light",
+            fontFamily: "light",
             color: "#cccccc"
           }}
         >

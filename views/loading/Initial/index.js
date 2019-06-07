@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { View, Text, Image } from "react-native";
+import { View, Image } from "react-native";
 import { Font } from "expo";
 
 import DotsAnimation from "../../../components/dots-animation";
 import Logo from "../../../components/logo/light";
-
+import Text from "../../../components/text";
 class InitialLoading extends Component {
   constructor(props) {
     super(props);
