@@ -10,8 +10,10 @@ export default class App extends React.Component {
   componentDidMount = async () => {
     // temporary loading
     await Font.loadAsync({
-      "Open-Sans": require("./assets/fonts/Open_Sans/OpenSans-Regular.ttf"),
-      "Open-Sans-light": require("./assets/fonts/Open_Sans/OpenSans-Light.ttf")
+      default: require("./assets/fonts/Open_Sans/OpenSans-Regular.ttf"),
+      bold: require("./assets/fonts/Open_Sans/OpenSans-Bold.ttf"),
+      semiBold: require("./assets/fonts/Open_Sans/OpenSans-SemiBold.ttf"),
+      light: require("./assets/fonts/Open_Sans/OpenSans-Light.ttf")
     });
     this.setState({ fonts: true });
   };
