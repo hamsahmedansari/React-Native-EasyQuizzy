@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Font } from "expo";
-import Loading from "./views/loading";
+import Auth from "./views/auth";
 
 export default class App extends React.Component {
   state = {
@@ -21,7 +21,7 @@ export default class App extends React.Component {
       // <View style={styles.container}>
       //   <Text>Open up App.js to start working on your app!</Text>
       // </View>
-      <Loading />
+      <Auth />
     );
   }
 }

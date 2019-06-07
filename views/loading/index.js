@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text } from "react-native";
+
+import Logo from "../../components/logo/dark";
 
 class Loading extends Component {
   constructor(props) {
@@ -16,10 +18,7 @@ class Loading extends Component {
           justifyContent: "space-around"
         }}
       >
-        <Image
-          source={require("../../assets/common/logo-dark.png")}
-          style={{ maxWidth: 150, resizeMode: "contain", width: "100%" }}
-        />
+        <Logo style={{ maxWidth: 150, resizeMode: "contain", width: "100%" }} />
         <Text
           style={{
             textTransform: "capitalize",

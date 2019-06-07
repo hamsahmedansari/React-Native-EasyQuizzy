@@ -3,6 +3,7 @@ import { View, Text, Image } from "react-native";
 import { Font } from "expo";
 
 import DotsAnimation from "../../../components/dots-animation";
+import Logo from "../../../components/logo/light";
 
 class InitialLoading extends Component {
   constructor(props) {
@@ -28,10 +29,9 @@ class InitialLoading extends Component {
         }}
       >
         <View>{/* <Text>v1.0.0</Text> */}</View>
-        <Image
-          source={require("../../../assets/common/logo-light.png")}
-          style={{ maxWidth: 200, resizeMode: "contain", width: "100%" }}
-        />
+
+        <Logo style={{ maxWidth: 200, resizeMode: "contain", width: "100%" }} />
+
         <View>
           <Text
             style={{
